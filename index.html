@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Setting viewport for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Search</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header containing the search and filter inputs -->
+    <header>
+        <!-- Text input for searching countries by name -->
+        <input type="text" id="searchInput"  class="A" placeholder="Search for a country..." />
+        <!-- <div id="suggestions" class="suggestions"></div> -->
+
+        <div id="suggestions" class="suggestions"></div>
+        <!-- Dropdown to filter countries by region -->
+        <select id="regionFilter">
+            <option value="">Filter by Region</option>
+            <!-- Options for each region, allowing the user to filter by continent -->
+            <option value="Europe">Europe</option>
+            <option value="Asia">Asia</option>
+            <option value="Africa">Africa</option>
+            <option value="Oceania">Oceania</option>
+            <option value="Americas">Americas</option>
+            <!-- Additional regions can be added as needed -->
+        </select>
+
+        <!-- Dropdown to filter countries by language -->
+        <select id="languageFilter" class="B">
+            <option value="">Filter by Language</option>
+            <!-- Options for common languages; this filter allows users to select countries by language -->
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Chinese">Chinese</option>
+            <!-- More languages can be added here if needed -->
+        </select>
+        <button id="showMoreBtn" class="D">Show More</button>
+        <!-- <button id="showFavoritesBtn">Show Favorites</button> -->
+
+    </header>
+
+    <main>
+        <!-- Container to display the list of countries dynamically -->
+        <div id="countryList" class="country-list"></div>
+        <!-- Button to load additional countries in increments -->
+        <!-- <button id="showMoreBtn">Show More</button> -->
+    </main>
+
+    <!-- Favorites section displayed as a sidebar or modal -->
+    <aside id="favoritesSection" class="favorites-section hidden">
+        <h3>Favorites</h3>
+        <!-- List of favorite countries, stored persistently using local storage -->
+        <ul id="favoritesList"></ul>
+    </aside>
+
+    <!-- Link to external JavaScript file for handling data fetching, filtering, and interactivity -->
+    <script src="main.js"></script>
+</body>
+</html>
